@@ -1,0 +1,66 @@
+.html{
+margin: 0px;
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+}        
+
+.body{
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}    
+
+#top_head{
+    width: 100%;
+    height: 15vh;
+    background-color: aqua;
+    touch-action: none;
+}
+
+#header_text{
+    padding-top: 5vh;
+    margin: 0%;
+    text-align: center;
+    font-size: 5vh;
+}
+
+
+
+.photo_container{
+    display: grid ;
+    grid-template-columns: 20vh 20vh;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+
+}
+
+.photo_container > div{
+
+    border: 1px solid black;
+    padding: 5%;
+    background-color: white;
+    height: 15vh;
+    width: auto;
+
+}
+
+
+.photo_container > div > img {  
+    height: 100%;
+    width: auto;  
+
+}
+
+
+
+.photo_container > div > p{
+
+}
+
+
+
+
