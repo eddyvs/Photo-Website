@@ -1,0 +1,271 @@
+
+.body{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 37, 37);
+}    
+
+/* Header */
+
+#top_head{
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(80, 173, 111, 1) 51%, rgba(0, 212, 255, 1) 100%);
+    background-size: 800% 800%;
+    border-bottom: .3vh solid black;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    position: relative;
+}
+
+
+
+@keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+}
+
+.header_text{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    font-size: calc(3vh + 1vw);    
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    z-index: 1;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+
+#button_wrapper{
+    width: 97%;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.header_button {
+  align-self: center;
+  padding: calc(.3vh + .3vw);
+  font-size: calc(1.5vh + .6vw);
+  color: white;
+  background-color: black;
+  border-radius: calc(2vh + .3vw);
+  text-decoration: none;
+  margin-right:2%;
+  padding-top: calc(.3vh + .1vw);
+}
+
+#instagram_button{
+    padding: 0;
+    margin-top: .5vh;
+    background-color: transparent;
+}
+
+#about_button{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#instagram_image{
+    text-decoration:none;
+    color: rgb(255, 255, 255);
+    height: calc(.5vw + 3vh);
+    width: auto;
+
+}
+
+
+/* About Me Page */
+
+#about_me_wrapper{
+    overflow-y: scroll;
+    height: 90vh;
+    display: flex;
+}
+
+#about_top_head{
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 8, 8, 1) 0%, rgba(255, 255, 77, 1) 38%, rgba(255, 153, 0, 1) 91%);
+    display: flex;
+    background-size: 800% 800%;
+    border-bottom: .3vh solid black;
+    animation: gradientShift 15s ease infinite;
+}
+
+#about_me_description_wrapper{
+    width: 50vw;
+}
+
+#about_me_description{
+    font-size: 2vh;
+    width: 50vw;
+    color: white;
+    border-radius: 2vh;
+    padding: 1vh;
+    margin: 1vh;
+    background-color: rgb(160, 160, 160);
+    display: flex;
+}
+
+#about_me_description_header{
+    font-size: 3vh;
+    width: 50vw;
+    color: rgb(255, 255, 255);
+    border-radius: 2vh;
+    padding: 1vh;
+    margin: 1vh;
+    text-align: center;
+    background-color: rgb(160, 160, 160); 
+}
+
+#about_me_scrolling_grid{
+    display: grid;
+    grid-auto-flow:row;
+    grid-template-rows: max-content;
+    width: 35vw;
+    right: 0;
+    height: fit-content;
+    position: absolute;
+}
+
+#about_me_images{
+    height: auto;
+    width: 30vh;
+}
+
+
+
+
+/* Photo Grids */
+
+.photo_grid_wrapper{
+    display: block;
+    overflow-x: scroll;
+    background-color: rgb(37, 37, 37);
+    height: 90vh;
+}
+
+.photo_grid{
+    display: grid;
+    grid-auto-flow:column;
+    grid-template-columns: max-content;
+    position: relative;
+    background-color: rgb(37, 37, 37);
+    padding: 0.5vh;
+    gap: 0.5vh;
+    width: fit-content;
+    overflow: visible;
+    height: 42vh;
+
+
+}
+.photo_box{
+    border-radius: 2vh;
+    height: 42.5vh;
+    width: max-content;
+    position: relative;
+
+}
+.photo_box > img {  
+    height:42.5vh;
+    width: auto;  
+    position: relative;
+    border-radius: 2vh 2vh 2vh 2vh;
+}
+
+
+.description{
+    font-size: 2vh;
+    z-index: 1;
+    text-align: center;
+    display: flex; 
+    position: relative;
+    padding-left: 1vh;
+    margin: 0.5vh;
+
+}
+
+.description_wrapper{
+
+    display: flex; 
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 0 0 2vh 2vh;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+/* Albums Page */
+
+
+
+
+/* selected image */
+
+#highlighted_image_wrapper{
+    position: absolute;
+    display: flex;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+}
+
+#highlighted_image{
+    height: 90vh;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+
+#imagewrapper{
+    border: 0.1vh solid black;
+    border-radius: 2vh;
+    background-color: rgb(48, 48, 48);
+    margin: auto;
+    display: flex;
+    width: min-content;
+    overflow-x: scroll;
+}
+
+
+
+#imagewrapper > img {
+    border-radius: 2vh 0 0 2vh;
+    object-fit: contain;
+    width: max-content;
+}
+
+#imagewrapper > p {
+    font-size:3vh;
+    color: white;
+    padding: 2vh;
+    margin: 0;
+    border-radius: 0 2vh 2vh 0;
+    border: 2px solid black;
+
+}
+
+.highlighted_image_description_wrapper{
+    height: max-content;
+    padding: 1vh;  
+    color: white;
+}
