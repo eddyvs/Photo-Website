@@ -90,7 +90,6 @@ function goTo() {
    img.onclick = () => image_maximize();
    photo_box.dataset.index=postIndex;
    photo_box.className='photo_box';
-   photo_box.onmouseover = image_hover;
    
    description.innerHTML = "Download";
    description.className="description";
@@ -127,6 +126,7 @@ function image_maximize() {
    highlighted_image_description_wrapper.download=true;
    highlighted_image_description_wrapper.className="highlighted_image_description_wrapper";
    
+   description.className="description";
 
    imagewrapper.id='imagewrapper';
 
@@ -145,9 +145,4 @@ function image_maximize() {
 
 function close_maximized_image() {
    document.getElementById("highlighted_image_wrapper").remove();
-}
-
-
-function image_hover(){
-   event.target.src.border="2px solid black"
 }
